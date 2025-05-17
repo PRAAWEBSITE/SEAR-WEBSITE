@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SEAR OFFICIAL - Tim Esport PUBG Mobile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f172a;
+      color: #ffffff;
+    }
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      background: radial-gradient(circle at center, #1e293b, #0f172a);
+      animation: fadeIn 1.5s ease-out;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      background: #020617;
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    }
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #facc15;
+      transition: width 0.3s;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 70px 30px;
+      animation: fadeInUp 1s ease-out;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #facc15;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #020617;
+      color: #9ca3af;
+      font-size: 14px;
+      border-top: 1px solid #1e293b;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      color: #f8fafc;
+    }
+    button {
+      padding: 12px 25px;
+      background: #facc15;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #fde047;
+    }
+    h2 {
+      color: #facc15;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    /* Slideshow Gallery */
+    .slideshow-container {
+      position: relative;
+      max-width: 700px;
+      margin: auto;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .mySlides {
+      display: none;
+    }
+    .mySlides img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    /* Fade animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    /* Dots */
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 6px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .active, .dot:hover {
+      background-color: #facc15;
+    }
+    /* Team slideshow styles */
+    .team-slide {
+      display: none;
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+      color: #fff;
+    }
+    .team-slide img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .team-slide.fade {
+      animation-name: fade;
+      animation-duration: 1s;
+    }
+    /* Header fonts and effects */
+    header img {
+      width: 140px; 
+      height: 140px; 
+      border: 5px solid #facc15; 
+      border-radius: 50%; 
+      margin-bottom: 20px;
+      animation: fadeInDown 1.5s ease forwards;
+    }
+    header h1 {
+      color: #facc15;
+      font-size: 3rem;
+      animation: fadeInUp 1.5s ease forwards;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      animation: fadeInUp 1.7s ease forwards;
+    }
+    header div button:first-child {
+      margin-right: 15px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="sa.jpg" alt="Logo SEAR OFFICIAL" />
+    <h1>SEAR OFFICIAL</h1>
+    <p>Komunitas Team Esports PUBG MOBILE</p>
+    <div style="margin-top: 25px;">
+      <button style="background: transparent; border: 2px solid #facc15; color: #facc15;">Tonton Highlight</button>
+      <section id="highlight">
+  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;box-shadow:0 0 15px rgba(0,0,0,0.5);">
+    <iframe src="https://www.youtube.com/embed/vxIkS2A1IeI" frameborder="0" allowfullscreen 
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"></iframe>
+  </div>
+</section>
+
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">Tentang Kami</a>
+    <a href="#history">Sejarah & Prestasi</a>
+    <a href="#gallery">Galeri</a>
+    <a href="#team">Tim</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+
+  <section id="about">
+    <h2>Tentang Kami</h2>
+    <p>
+      SEAR OFFICIAL adalah tim Esport PUBG Mobile profesional yang berkomitmen pada keunggulan dan kerja sama tim untuk menguasai turnamen nasional dan internasional.
+    </p>
+  </section>
+
+  <section id="history" style="background: #111827;">
+    <h2>Sejarah & Prestasi</h2>
+    <ul>
+      <li>🏆 Juara Turnamen Lokal Jakarta 2021</li>
+      <li>🏆 Juara Turnamen Lokal Sumatera Utara 2022</li>
+      <li>🥈 Runner-Up PUBG Nusantara League 2023</li>
+      <li>🥈 Runner-Up PUBG Nusantara League 2024</li>
+      <li>🎖️ Finalis Top 8 PMNC Grand Final 2024</li>
+      <li>🏆 Juara Turnamen Lokal Jakarta 2025</li>
+    </ul>
+  </section>
+
+  <section id="gallery">
+    <h2>Galeri</h2>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="https://i.postimg.cc/Wzj7T6D5/1.jpg" alt="Foto Galeri 1" />
+      </div>
+      <div class="mySlides fade">
+        <img src="https://i.postimg.cc/dVDjs01c/2.jpg" alt="Foto Galeri 2" />
+      </div>
+      <div class="mySlides fade">
+        <img src="https://i.postimg.cc/L87BnMYY/3.jpg" alt="Foto Galeri 3" />
+      </div>
+      <div class="mySlides fade">
+        <img src="https://i.postimg.cc/tTdhSZrW/4.jpg" alt="Foto Galeri 4" />
+      </div>
+    </div>
+    <br />
+    <div style="text-align:center;">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+    </div>
+  </section>
+
+  <section id="team" style="background: #111827;">
+    <h2>Tim SEAR OFFICIAL</h2>
+    <div class="team-slide fade" style="display: block;">
+      <img src="https://i.postimg.cc/W3KQ844G/5.jpg" alt="Foto Tim 1" />
+      <h3 style="margin-top: 15px; color:#facc15;">xPandaSEAR★</h3>
+      <p>Kapten</p>
+      <p>🏆 MVP Turnamen PUBG Mobile 2023</p>
+    </div>
+    <div class="team-slide fade">
+      <img src="https://i.postimg.cc/Fz3nxg8v/6.jpg" alt="Foto Tim 2" />
+      <h3 style="margin-top: 15px; color:#facc15;">xPraaSEAR★</h3>
+      <p>Petugas</p>
+      <p>🏅 Penghargaan Strategi Terbaik 2023</p>
+    </div>
+    <div class="team-slide fade">
+      <img src="https://i.postimg.cc/Fz3nxg8v/6.jpg" alt="Foto Tim 3" />
+      <h3 style="margin-top: 15px; color:#facc15;">xCataSEAR</h3>
+      <p>Elite</p>
+      <p>🥉 Performa Konsisten Terbaik</p>
+    </div>
+    <br />
+    <div style="text-align:center;">
+      <span class="dot" onclick="currentTeamSlide(1)"></span>
+      <span class="dot" onclick="currentTeamSlide(2)"></span>
+      <span class="dot" onclick="currentTeamSlide(3)"></span>
+    </div>
+  </section>
+
+  <section id="contact" style="background: #111827;">
+    <h2>Kontak Kami</h2>
+    <form action="https://formspree.io/f/mdkgbwyy" method="POST">
+      <input type="text" name="name" placeholder="Nama Anda" required />
+      <input type="email" name="_replyto" placeholder="Email Anda" required />
+      <textarea name="message" placeholder="Pesan atau Komplain Anda" rows="5" required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 SEAR OFFICIAL. Semua hak cipta dilindungi.
+  </footer>
+
+  <script>
+    // Slideshow Galeri
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 4000); // ganti slide tiap 4 detik
+    }
+    function currentSlide(n) {
+      slideIndex = n - 1;
+      showSlides();
+    }
+
+    // Slideshow Tim
+    let teamSlideIndex = 0;
+    showTeamSlides();
+    function showTeamSlides() {
+      let i;
+      let slides = document.getElementsByClassName("team-slide");
+      let dots = document.querySelectorAll("#team + div span.dot");
+      if (dots.length === 0) {
+        dots = document.getElementsByClassName("dot");
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      teamSlideIndex++;
+      if (teamSlideIndex > slides
+.length) {teamSlideIndex = 1}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[teamSlideIndex-1].style.display = "block";
+dots[teamSlideIndex-1].className += " active";
+setTimeout(showTeamSlides, 4000); // ganti slide tiap 4 detik
+}
+function currentTeamSlide(n) {
+teamSlideIndex = n - 1;
+showTeamSlides();
+}
+</script>
+</body> </html>
