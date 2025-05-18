@@ -188,7 +188,62 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
+  
+@media (max-width: 768px) {
+  header {
+    padding: 50px 10px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 12px 0;
+  }
+
+  nav a {
+    padding: 5px 0;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .team-slide img {
+    max-width: 90%;
+  }
+
+  input, textarea, button {
+    font-size: 1rem;
+  }
+
+  iframe {
+    height: auto;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+
+/* Fix untuk konten tertutup nav sticky */
+#about, #history, #gallery, #team, #contact {
+  scroll-margin-top: 100px;
+}
+
+</style>
 </head>
 <body>
 
